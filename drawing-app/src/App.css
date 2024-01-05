@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+#pageBackgound{
+  background-color: #676869;
+}
+#canvasBackgound{
+  background-color: white;
+  border: black;
+}
+
+.controlpanel{
+  background-color: #343536;
+  position: "absolute";
+  top: "500";
+  left: "500";
+  width: "100%";
+}
