@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import SliderComponent from './components/SliderComponent'
 import { useEffect, useRef, useState } from "react";
+import React from 'react';
 
 function App() {
     const [mouseData, setMouseData] = useState({ x: 0, y: 0 });
@@ -16,6 +18,12 @@ function App() {
         canvas.height = 250;
         setCanvasCTX(ctx);
     }, [canvasRef]);
+
+
+    // Callback function to update parentVariable
+    const updateSizeVariable = (newValue) => {
+        setSize(newValue);
+    };
 
     const SetPos = (e) => {
         setMouseData({
@@ -52,14 +60,8 @@ function App() {
             ></canvas>
 
             <div className="controlpanel">
-                <input
-                    type="range"
-                    value={size}
-                    max={40}
-                    onChange={(e) => {
-                        setSize(e.target.value);
-                    }}
-                />
+
+                <SliderComponent updateSizeVariable={updateSizeVariable}/>
                 <input
                     type="color"
                     value={color}
