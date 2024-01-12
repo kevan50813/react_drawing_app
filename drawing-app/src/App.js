@@ -11,12 +11,13 @@ function App() {
     const [canvasCTX, setCanvasCTX] = useState(null);
     const [color, setColor] = useState("#000000");
     const [size, setSize] = useState(10);
+    
 
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
-        canvas.width = 250;
-        canvas.height = 250;
+        canvas.width = 500;
+        canvas.height = 500;
         setCanvasCTX(ctx);
     }, [canvasRef]);
 

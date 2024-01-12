@@ -14,7 +14,7 @@ const SliderComponent = ({  updateSizeVariable }) => {
       <p>Slider Value: {sliderValue}</p>
       <input
         type="range"
-        min="0"
+        min="1"
         max="100"
         value={sliderValue}
         onChange={handleSliderChange}
