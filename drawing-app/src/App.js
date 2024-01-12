@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SliderComponent from './components/SliderComponent'
+import ColourChangeComponent from './components/ColourChangeComponent';
 import { useEffect, useRef, useState } from "react";
 import React from 'react';
 
@@ -25,6 +26,9 @@ function App() {
         setSize(newValue);
     };
 
+    const updateColour = (newValue) => {
+        setColor(newValue);
+    }
     const SetPos = (e) => {
         setMouseData({
             x: e.clientX,
@@ -62,13 +66,7 @@ function App() {
             <div className="controlpanel">
 
                 <SliderComponent updateSizeVariable={updateSizeVariable}/>
-                <input
-                    type="color"
-                    value={color}
-                    onChange={(e) => {
-                        setColor(e.target.value);
-                    }}
-                />
+                <ColourChangeComponent updateColour={updateColour}/>
                 <button
                     onClick={() => {
                         const ctx = canvasCTX;
