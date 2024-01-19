@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const ColourChangeComponent = ({updateColour}) => {
   const [color, setColor] = useState("#000000");
   return (
-    <input
+    <input id="colourPicker"
     type="color"
     value={color}
     onChange={(e) => {

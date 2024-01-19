@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import "./css/slider.css"
 import SliderComponent from './components/SliderComponent'
 import ColourChangeComponent from './components/ColourChangeComponent';
 import { useEffect, useRef, useState } from "react";
@@ -16,7 +16,7 @@ function App() {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
-        canvas.width = 500;
+        canvas.width = 1800;
         canvas.height = 500;
         setCanvasCTX(ctx);
     }, [canvasRef]);

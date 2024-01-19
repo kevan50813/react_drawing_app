@@ -10,16 +10,15 @@ const SliderComponent = ({  updateSizeVariable }) => {
   };
 
   return (
-    <div>
+    <><div class='sliderContainer'>
       <p>Slider Value: {sliderValue}</p>
-      <input
+      <input class="slider" id="sliderRange"
         type="range"
         min="1"
         max="100"
         value={sliderValue}
-        onChange={handleSliderChange}
-      />
-    </div>
+        onChange={handleSliderChange} />
+    </div><script src = "scripts/slider.js"></script></>
   );
 };
 
