@@ -1,5 +1,6 @@
 import './App.css';
 import "./css/slider.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 import SliderComponent from './components/SliderComponent'
 import ColourChangeComponent from './components/ColourChangeComponent';
 import { useEffect, useRef, useState } from "react";
@@ -80,6 +81,18 @@ function App() {
                     }}
                 >
                     Clear
+                </button>
+
+                <input type="checkbox" name="eraser" id="erase" />
+                <label class="eraser-label" for="eraser">
+                    Erase
+                </label>
+                <button
+                    onClick={() => {
+                        setColor("#FFFFFF");
+                    }}
+                >
+                    erase
                 </button>
             </div>
         </div>
