@@ -56,8 +56,8 @@ function App() {
     };
 
     return (
-        <div id ="pageBackgound">
-            <canvas id ="canvasBackgound"
+        <div  data-testid="pageBackgound" id ="pageBackgound">
+            <canvas data-testid="canvasBackgound" id ="canvasBackgound"
                 ref={canvasRef}
                 onMouseEnter={(e) => SetPos(e)}
                 onMouseMove={(e) => SetPos(e)}
@@ -65,7 +65,7 @@ function App() {
                 onMouseMove={(e) => Draw(e)}
             ></canvas>
 
-            <div className="controlpanel">
+            <div data-testid="controlpanel" className="controlpanel">
 
                 <SliderComponent updateSizeVariable={updateSizeVariable}/>
                 <ColourChangeComponent updateColour={updateColour}/>
